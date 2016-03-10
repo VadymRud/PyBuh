@@ -1,4 +1,5 @@
-django 
+django
+psycopg2 
 djangorestframework
 markdown
 pillow
