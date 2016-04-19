@@ -1,4 +1,4 @@
-metadata
+/.pydevproject
 bin/
 tmp/
 *.tmp
@@ -49,3 +49,10 @@ local.properties
 .recommenders/
 
 __pycache__/
+dataSources.ids
+dataSources.local.xml
+encodings.xml
+misc.xml
+modules.xml
+PyBuh.iml
+workspace.xml
