@@ -33,18 +33,23 @@ INSTALLED_APPS = [
     'rosetta',
     'chart_account',
     'card_product',
+    'registeres',
+    'documentes',
 
 ]
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
 ]
 
 ROOT_URLCONF = 'PyBuh.urls'
@@ -72,24 +77,24 @@ WSGI_APPLICATION = 'PyBuh.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'NAME': 'free_buh',
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'USER': 'root',
-        'PASSWORD': 'root',
-        'PORT': '5432',
-        'HOST': 'localhost',
-
-    },
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
 }
+
+# DATABASES = {
+#     'default': {
+#         'NAME': 'free_buh',
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'USER': 'root',
+#         'PASSWORD': 'root',
+#         'PORT': '5432',
+#         'HOST': 'localhost',
+#
+#     },
+# }
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
 
@@ -129,8 +134,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 LANGUAGES = [
-    ('ua', _('Ukrainian')),
-    ('ru', _('Russian')),
-    ('en', _('English')),
+
+    #('ru', _('Russian')),
+    #('en', _('English')),
+    ('uk', _('Ukrainian')),
 
 ]

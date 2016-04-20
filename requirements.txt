@@ -20,4 +20,5 @@ django-cities-light
 django-extensions
 django-debug-toolbar
 django-tracking2
+django-rosetta
 #jsonfield

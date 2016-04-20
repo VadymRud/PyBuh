@@ -34,6 +34,7 @@ class Subconto(BaseChartAccaunt):
 
     class Meta:
         ordering = ['number']
+        verbose_name = _('Subconto')
         verbose_name_plural = _('Subconto')
 
 
