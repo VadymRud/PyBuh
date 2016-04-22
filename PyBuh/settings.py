@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'card_product',
     'registeres',
     'documentes',
+    'products',
 
 ]
 
@@ -140,3 +141,8 @@ LANGUAGES = [
     ('uk', _('Ukrainian')),
 
 ]
+
+GRAPH_MODELS = {
+  'all_applications': True,
+  'group_models': True,
+}
