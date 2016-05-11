@@ -3,7 +3,7 @@ from .models import ChartAccaunt, ChartAccauntGroup, Subconto
 from django.utils.translation import ugettext_lazy as _
 
 
-class  ChartAccauntAdmin(admin.ModelAdmin):
+class ChartAccauntAdmin(admin.ModelAdmin):
     fieldsets = [
             (_('General information'), {'fields': ['number', 'name', 'group', 'date',  'description', 'code', 'subconto',
                 'active_passive', 'quantitative']}),

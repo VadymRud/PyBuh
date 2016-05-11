@@ -3,6 +3,7 @@ import uuid
 from datetime import datetime
 from django.utils.translation import ugettext_lazy as _
 from mptt.models import MPTTModel, TreeForeignKey
+from jsonfield import JSONField
 
 
 class BaseProduct(models.Model):
@@ -18,7 +19,7 @@ class BaseProduct(models.Model):
 
 
 class ProductCatalog(BaseProduct, MPTTModel):
-    parent = TreeForeignKey('self', null=True, blank=True, related_name='children', db_index=True)
+    parent = TreeForeignKey('self', null=True, blank=True, related_name='children', db_index=True, verbose_name = _('Parent Catalog'))
 
     def __str__(self):
         return '%s %s' % (self.number, self.name)
@@ -42,3 +43,18 @@ class UnitsOfMeasurement(models.Model):
         ordering = ['short_name']
         verbose_name = _('Units of measurement')
         verbose_name_plural = _('Units of measurements')
+
+
+class Product(BaseProduct):
+    catalog = models.ForeignKey(ProductCatalog, null=True, blank=True, verbose_name=_('Catalog'))
+    units = models.ForeignKey(UnitsOfMeasurement, null=True, blank=True, verbose_name=_('Units'))
+    size = JSONField(null=True, blank=True, verbose_name=_('Units'))
+
+    def __str__(self):
+        return '%s %s' % (self.number, self.name)
+
+    class Meta:
+        ordering = ['number']
+        verbose_name = _('Product')
+        verbose_name_plural = _('Products')
+

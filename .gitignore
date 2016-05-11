@@ -1,5 +1,5 @@
 /.pydevproject
-/.idea
+.idea/
 bin/
 tmp/
 *.tmp

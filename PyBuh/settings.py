@@ -30,9 +30,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.admindocs',
     'django_extensions',
+
     'rosetta',
+    'accounting_entry',
     'chart_account',
-    'card_product',
+
     'registeres',
     'documentes',
     'products',

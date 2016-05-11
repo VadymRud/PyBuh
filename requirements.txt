@@ -23,3 +23,4 @@ django-tracking2
 django-rosetta
 #jsonfield
 django-mptt
+pygraphviz
