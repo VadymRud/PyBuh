@@ -18,8 +18,9 @@ class BaseDocumentes(models.Model):
                             related_name='chart_account_actives_related', blank=True)
     chart_account_passive = models.ManyToManyField(ChartAccaunt, verbose_name=_('Chart Accaunt Passive'),
                             related_name='chart_account_passives_related', blank=True)
+
     class Meta:
-       abstract = True
+        abstract = True
 
 
 #приходна накладна

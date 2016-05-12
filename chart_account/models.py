@@ -6,11 +6,11 @@ from django.utils.translation import ugettext_lazy as _
 
 
 class BaseChartAccaunt(models.Model):
-    code = models.UUIDField( default=uuid.uuid4, verbose_name = _('Unique code'), editable=False)
-    date = models.DateTimeField(default=datetime.now, verbose_name = _('Date creation'))
+    code = models.UUIDField( default=uuid.uuid4, verbose_name=_('Unique code'), editable=False)
+    date = models.DateTimeField(default=datetime.now, verbose_name=_('Date creation'))
     active = models.BooleanField(verbose_name = _('Active'), default=True)
-    name = models.CharField(max_length=255, verbose_name = _('Full name'))
-    number = models.CharField(max_length=255, verbose_name = _('Number'))
+    name = models.CharField(max_length=255, verbose_name=_('Full name'))
+    number = models.CharField(max_length=255, verbose_name=_('Number'))
 
     class Meta:
        abstract = True
@@ -23,6 +23,7 @@ class BaseChartAccaunt(models.Model):
 class ChartAccauntGroup(BaseChartAccaunt):
     def __str__(self):
         return '%s %s' % (self.number, self.name)
+
     class Meta:
         ordering = ['number']
         verbose_name_plural = _('Group Accaunt Plural')
@@ -59,6 +60,7 @@ class ChartAccaunt(BaseChartAccaunt):
     active_passive = models.SmallIntegerField(choices=active_passive_choises, verbose_name=_('Active or Passive'))
     def __str__(self):
         return '%s %s' % (self.number, self.name)
+
     class Meta:
         ordering = ['number']
         verbose_name_plural = _('Chart Accaunt Plural')

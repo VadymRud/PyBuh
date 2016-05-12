@@ -31,9 +31,8 @@ class BaseAccountingEntry(models.Model):
     sum_debit = MoneyField(verbose_name=_('Sum Debit'))
     sum_credit = MoneyField(verbose_name=_('Sum Credit'))
 
-
     class Meta:
-       abstract = True
+        abstract = True
 
 
 class AccountingEntry(BaseAccountingEntry):
