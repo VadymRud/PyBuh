@@ -25,3 +25,5 @@ django-rosetta
 django-mptt
 pygraphviz
 jsonfield
+
+
