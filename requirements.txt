@@ -24,6 +24,6 @@ django-rosetta
 #jsonfield
 django-mptt
 pygraphviz
-jsonfield
-
+jsonfield #for sqlite and MySQL
+pdfkit
 

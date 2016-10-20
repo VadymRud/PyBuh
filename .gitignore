@@ -1,5 +1,5 @@
-/.pydevproject
-/.idea/
+.pydevproject
+.idea
 bin/
 tmp/
 *.tmp
@@ -57,3 +57,4 @@ misc.xml
 modules.xml
 PyBuh.iml
 workspace.xml
+log/*.*

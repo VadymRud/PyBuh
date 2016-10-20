@@ -1,10 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <title>Test</title>
+  <style>
+    body {
+      background-color: #f7f7f7;
+    }
+  </style>
 </head>
 <body>
+  <h1>Test Template</h1>
+
+    <p></p>
+
+  <table>
+      {% for paragraph in paragraphs %}
+      <tr>
+          <td>
+                {{ paragraph }}
+          </td>
+      </tr>
+      {% endfor %}
+  </table>
 
 </body>
 </html>
